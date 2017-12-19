@@ -1,0 +1,213 @@
+/*body{
+    margin: auto;
+}*/
+
+.todo-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px 70px 700px 100px;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+}
+
+.todo-header {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: #3d7ce2;
+  text-align: center;
+
+}
+.todo-search {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #3d7ce2;
+  text-align: center;
+  font-size: 50px;
+}
+
+.todo-left-body {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #3d7ce2;
+
+}
+
+.todo-right-body {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #3d7ce2;
+}
+
+.todo-select {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+}
+.todo-select-search {
+  float: left;
+  top: 10px;
+  left: 10px;
+  position: relative;
+
+}
+.todo-date {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.todo-date-search {
+  float: left;
+  top: 10px;
+  left: 10px;
+  position: relative;
+}
+
+.todo-text-search {
+  width: 450px;
+  height: 40px;
+  top: 10px;
+  left: 10px;
+  position: relative;
+  float: left;
+  font-size: 20px;
+  margin-left: 10px;
+  border: 2px solid #3d7ce2;
+  /*padding: 12px 20px;*/
+  /*margin: 8px 0;*/
+  box-sizing: border-box;
+}
+
+.todo-button-search {
+  width: 150px;
+  height: 45px;
+  top: 10px;
+  left: 10px;
+  position: relative;
+  float: left;
+  font-size: 20px;
+  margin-left: 10px;
+  border-radius: 2  px;
+}
+
+.todo-ol-list-todo {
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.todo-li-todo {
+  width: 100%;
+  height: 100px;
+  background-color: #fffff;
+}
+.todo-label-date {
+  width: 25%;
+  height: 20px;
+  height: auto;
+  font-style: normal;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 25px;
+}
+.todo-label-category {
+  width: 25%;
+  height: 20px;
+  height: auto;
+  font-family: monospace;
+  font-stretch: semi-expanded;
+  font-size: 25px;
+  margin-right: 2px;
+  float: right;
+}
+
+.todo-label-title {
+  width: 50%;
+  height: 20px;
+  height: auto;
+  font-family: monospace;
+  font-stretch: semi-expanded;
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #ed3309;
+}
+.todo-desc {
+  width: 100%;
+  height: 25px;
+  font-size: 22px;
+  height: auto;
+  font-family: monospace;
+  font-size: 25 px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.todo-create-label {
+  height: 20px;
+  min-width: 350px;
+  height: 30px;
+  font-family: monospace;
+  font-stretch: semi-expanded;
+  font-size: 25px;
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.todo-div {
+  /*width: 100%;*/
+  height: 50px;
+  margin: 10px, 10px 10px 10px;
+  padding: 10px;
+}
+.todo-select-create {
+  float: right;
+  margin-right: 50px;
+  width: 400px;
+}
+.todo-date-create {
+  float: right;
+  margin-right: 50px;
+  width: 400px;
+}
+.todo-text-create {
+  width: 400px;
+  height: 40px;
+  font-size: 20px;
+  border: 2px solid #3d7ce2;
+  float: right;
+  margin-right: 50px;
+  /*margin: 8px 0;*/
+  box-sizing: border-box;
+}
+.todo-text-desc {
+  width: 400px;
+  height: 80px;
+  font-size: 20px;
+  border: 2px solid #3d7ce2;
+  float: right;
+  margin-right: 50px;
+  /*margin: 8px 0;*/
+  box-sizing: border-box;
+}
+
+.todo-btn-create{
+  width: 400px;
+  height: 40px;
+  font-size: 22px;
+  text-align: center;
+  top: 50px;
+  position: relative;
+  float: right;
+  margin-right: 60px;
+  font-weight: bold;
+}

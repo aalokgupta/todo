@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>ToDo Apll</title>
+      <link rel="stylesheet" href="/css/main.css">
+      <script src = "/script/jquery-3.2.1.min.js"></script>
+      <script src = "/script/angular.min.js"></script>
+      <script src = "/script/create-todo.js"></script>
+      <script src = "/script/get-todo.js"></script>
+      <script src = "/script/moment.js"></script>
+  </head>
+
+  <body ng-app = "todoModule">
+    <div ng-controller = "todoController" class = "todo-grid-layout">
+     <div class = "todo-header">
+       <h2>Welcome to ToDo web App</h2>
+    </div>
+
+     <div class = "todo-search">
+       <div class = "">
+         <select class = "todo-select todo-select-search" id = "id-category-search">
+           <option value = "personal">personal</option>
+           <option value = "Office">Office</option>
+           <option value = "Home">Home</option>
+           <option value = "Friends">Friends</option>
+           <option value = "Other">Other</option>
+         </select>
+         <input type="date" name="Date" class = "todo-date todo-date-search" id = "id-date-search" onchange = "dateHandle(event)">
+         <input type = "text" class = "todo-text-search" placeholder = "type todo to search" id = "id-desc-search"/>
+         <input type = "button" class = "todo-button-search" value = "Search" ng-click = "searchTodo()"/>
+       </div>
+     </div>
+     <div class = "todo-left-body">
+        <div class = "">
+            <ol class = "todo-ol-list-todo" >
+              <li class = "todo-li-todo" ng-repeat = "todo in todos">
+                <label class = "todo-label-date">{{todo.date}},  </label>
+                <label class = "todo-label-title">{{todo.title}}</label>
+                <label class = "todo-label-category">{{todo.category}}</label>
+                <div>
+                  <label class = "todo-desc">{{todo.desc}}</label>
+                </div>
+              </li>
+            </ol>
+        </div>
+
+        </div>
+     <div class = "todo-right-body">
+       <h2 style = "text-align: center">Create Todo</h2>
+       <div class = "">
+
+         <div class = "todo-div" >
+           <label class = "todo-create-label">Date: </label>
+           <input type = "date" value = "Select Date" class = "todo-date todo-date-create" id = "id-date"/>
+         </div>
+
+          <div class = "todo-div">
+            <label class = "todo-create-label">Title: </label>
+            <input type = "text" placeholder="type title" class = "todo-text-create" id = "id-title"/>
+          </div>
+
+          <div class = "todo-div">
+            <label class = "todo-create-label">Category: </label>
+            <select class = "todo-select todo-select-create" id = "id-category">
+              <option value = "personal">personal</option>
+              <option value = "Office">Office</option>
+              <option value = "Home">Home</option>
+              <option value = "Friends">Friends</option>
+              <option value = "Other">Other</option>
+            </select>
+          </div>
+
+          <div class = "todo-div">
+            <label class = "todo-create-label">Desc: </label>
+            <input type = "text" placeholder="type title" class = "todo-text-desc" id = "id-desc"/>
+          </div>
+
+          <div class = "todo-div">
+            <input type = "button" value = "Create Todo" class = "todo-btn-create" ng-click = "createTodo()"/>
+          </div>
+            <div class = "todo-div">
+              <input type = "button" class = "todo-btn-create" ng-click = "getTodos()" value = "Get all todos"></label>
+            </div>
+       </div>
+     </div>
+   </div>
+  </body>
+</html>
